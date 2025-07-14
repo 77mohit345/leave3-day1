@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+ <style>
+input{
+    width: 50px;
+    margin: 5px;
+}  
+ </style>
+
+<body>
+<h2>Student Result</h2>
+<label>English:<input type="number" id="sub1"></label><br>
+<label>Hindi:<input type="number" id="sub2"></label><br>
+<label>geo:<input type="number" id="sub3"></label><br>
+<label>politicla:<input type="number" id="sub4"></label><br>
+<label>history:<input type="number" id="sub5"></label><br>
+<label>math:<input type="number" id="sub6"></label><br>
+     
+<button onclick="displayText()">submit</button>
+<H3 id="total"></H3>
+<h3  id="percentage"></h3>
+<h3 id="result"></h3>
+<script>
+  function displayText()
+  {  let a = parseFloat(document.getElementById("sub1").value) || 0;
+     let b = parseFloat(document.getElementById("sub2").value) || 0;
+     let c = parseFloat(document.getElementById("sub3").value) || 0;
+     let d = parseFloat(document.getElementById("sub4").value) || 0;
+     let e = parseFloat(document.getElementById("sub5").value) || 0; 
+     let f = parseFloat(document.getElementById("sub6").value) || 0;
+     let total = a + b + c + d + e + f;
+     let percentage = (total / 600) * 100;
+     let result = percentage >= 40 ? "Pass" : "Fail";        
+ 
+      document.getElementById("total").textContent = "total marks:" + total;
+      document.getElementById("percentage").textContent = "percentage:" + percentage.toFixed(2) + "%";
+      document.getElementById("result").textContent = "Result:"+ result;
+
+      }
+</script>
+</body>
+</html> 

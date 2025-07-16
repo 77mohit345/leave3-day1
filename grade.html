@@ -27,9 +27,24 @@
   Scicence : <input type="number"  id="marks3" ><br>
    
   <button onclick="calculaterResult()">calculater Result</button>
+    <button onclick="clearData()">clear</button>
 <div id="output" style="margin-top:15px;"></div>
   
   <script>
+     function clearData()
+    {
+      document.getElementById("name").value = "";
+      document.getElementById("Roll").value = "";
+      document.getElementById("marks1").value= "";
+      document.getElementById("marks2").value = "";
+      document.getElementById("marks3").value = "";
+       
+      document.getElementById("output").innerHTML="";
+
+    } 
+    
+
+    
     function calculaterResult()
     {
            //above a 100!

@@ -28,6 +28,7 @@
    
   <button onclick="calculaterResult()">calculater Result</button>
     <button onclick="clearData()">clear</button>
+   <button onclick="print('find')">Print</button>
 <div id="output" style="margin-top:15px;"></div>
   
   <script>
@@ -43,7 +44,20 @@
 
     } 
     
+//add a print function 
+       window.onload= function print(find)
+  {  
+     if('clcik' === true){
+     const printContents = document.getElementById("find").innerHTML;
+      const originalContents = document.body.innerHTML;
+      document.body.innerHTML = printContents;
+      window.print();
+      document.body.innerHTML = originalContents;
 
+}
+
+   } 
+    
     
     function calculaterResult()
     {

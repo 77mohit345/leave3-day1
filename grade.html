@@ -39,7 +39,11 @@
     //add a download button 
      function downloadpdf()
      {
-      const element = document.getElementById("output");
+       f(true)
+       {
+        document.getElementById("clearshow").innerHTML  = "Your result show download succesfully!  ";
+       }
+       const element = document.getElementById("output");
 
       const opt = 
       {
@@ -64,12 +68,22 @@
        
       document.getElementById("output").innerHTML="";
 
+    if(true)
+      { 
+        document.getElementById("clearshow").innerHTML = "Form has been cleared sucesfully!";
+ 
+      }
+      
     } 
     
 //add a print function 
        window.onload= function print(find)
   {  
-     if('clcik' === true){
+     if('clcik' === true)
+     {
+    const  res  =  document.getElementById("clearshow").innerHTML = "Your result print succcesfully!";  
+    
+    if(res.value === " Your result print succesfully!"){
      const printContents = document.getElementById("find").innerHTML;
       const originalContents = document.body.innerHTML;
       document.body.innerHTML = printContents;
@@ -99,6 +113,11 @@
           return; //stop the function here 
         
         
+        }
+      
+        if(true)
+        {
+          document.getElementById("clearshow").innerHTML = "Your result upload succesfully!  ";
         }
 
        //total & percentage

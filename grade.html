@@ -105,7 +105,42 @@
       const m1  = parseFloat(document.getElementById("marks1").value);
        const m2 = parseFloat(document.getElementById("marks2").value);
        const m3 = parseFloat(document.getElementById("marks3").value);
-       //above 100!
+      const out = document.getElementById("output");
+
+       // add a validation  in  from     
+if(name === "" || roll === "")
+  { 
+     if(true){
+    document.getElementById("clearshow").innerText = "  You miss tha  input! reload agin and fill to all input creat"; 
+    out.style.display = "none";
+  }
+
+return false;
+ }   
+else 
+{
+  out.style.displey = "1";
+}
+//End of validatio form   
+// marks vlaue  have 0 to  
+ if(m1 <= 1 || m2 <= 1 || m3 <= 1)
+  {
+   document.getElementById("clearshow").innerText = "  You miss tha  input! reload agin and fill to all input creat"; 
+   out.style.displey = "1";
+   return false;
+ 
+  }
+   else if(m1 <= 0 || m2 <= 0 || m3 <= 0)
+  {
+     document.getElementById("clearshow").innerText = "  You miss tha  input! reload agin and fill to all input creat"; 
+   out.style.displey = "1";
+return false;
+
+  }
+  
+//End value function  
+     
+      //above 100!
         if(m1 > 100 || m2> 100 || m3 >100)
         {
           document.write("You marks above 100 ")
